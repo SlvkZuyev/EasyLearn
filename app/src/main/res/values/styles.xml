@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Regular_button">
+        <item name="android:fontFamily">arial</item>
+        <item name="android:background">@drawable/rnd_rect_blue</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AnswerButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:fontFamily">@font/denda_new_c</item>
+        <item name="android:background">@drawable/rnd_rect_blue</item>
+        <item name="android:onClick">buttonPress</item>
+        <item name="android:text">Button</item>
+    </style>
+
+    <style name="WordToTranslate">
+       <item name="android:textColor">@color/clearBlack</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">Arial</item>
+        <item  name="android:text">Word to translate</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <!-- <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item> -->
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="progressCircles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="TaskCard" parent="CardView">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="background">@color/white</item>
+    </style>
+
+    <style name="ThemeCard"  parent="CardView">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
+
+    <style name="TaskCardText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="fontFamily">@font/denda_new_c_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/clearBlack</item>
+    </style>
+
+    <style name="GoNextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:onClick">OnClick_GoNext</item>
+        <item name="android:text">Далее ></item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Easy learn</string>
+    <string name="statistic_string">%1$d из %2$d слов верны</string>
+    <string name="blitz">&#9889;Блиц&#9889;</string>
+</resources>

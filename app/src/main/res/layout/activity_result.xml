@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    android:gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/motivating_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Какой-то мотивирующий текст"
+            android:textAlignment="center"
+
+            android:textColor="@color/clearBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/percent_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.385" />
+
+        <TextView
+            android:id="@+id/correct_and_incorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 из 15 слов верны"
+            android:textColor="@color/grey"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/percent_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/motivating_text"
+            app:layout_constraintVertical_bias="0.414" />
+
+        <Button
+            android:id="@+id/go_back_button"
+            style="@style/Regular_button"
+            android:layout_width="0dp"
+            android:layout_height="77dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/acme"
+            android:onClick="OnClick_GoBack"
+            android:text="К списку тем"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/try_again_button"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline1" />
+
+        <Button
+            android:id="@+id/try_again_button"
+            style="@style/Regular_button"
+            android:layout_width="0dp"
+            android:layout_height="77dp"
+            android:layout_marginBottom="44dp"
+            android:onClick="OnClick_TryAgain"
+            android:text="Пройти еще раз"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <ImageView
+            android:id="@+id/percent_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.374"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/percent_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textColor="@color/white"
+            android:textSize="49sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/percent_circle"
+            app:layout_constraintEnd_toEndOf="@+id/percent_circle"
+            app:layout_constraintStart_toStartOf="@+id/percent_circle"
+            app:layout_constraintTop_toTopOf="@+id/percent_circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

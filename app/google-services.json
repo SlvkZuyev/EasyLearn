@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1062375214877",
+    "firebase_url": "https://impactful-veld-308011-default-rtdb.firebaseio.com",
+    "project_id": "impactful-veld-308011",
+    "storage_bucket": "impactful-veld-308011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062375214877:android:80672f4552f95532189bf4",
+        "android_client_info": {
+          "package_name": "com.slvk.firebasetestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062375214877-04ekjkhdh1ritd0skrgecn8jesk107vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybTWreNr_c6H7sI5tjQfU55dExuE8Ubo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062375214877-04ekjkhdh1ritd0skrgecn8jesk107vt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062375214877:android:23e416a915ce0c3d189bf4",
+        "android_client_info": {
+          "package_name": "com.slvk.words20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062375214877-04ekjkhdh1ritd0skrgecn8jesk107vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybTWreNr_c6H7sI5tjQfU55dExuE8Ubo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062375214877-04ekjkhdh1ritd0skrgecn8jesk107vt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

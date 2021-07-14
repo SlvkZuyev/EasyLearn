@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackgroundBlue">#82E2E7</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="correctGreen">#1BD895</color>
+    <color name="notCorrectRed">#FF4E42</color>
+    <color name="phraseBlue">#8482E7</color>
+    <color name="clearBlack">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#AAAAAA</color>
+    <color name="answerButtonBlue">#75A3E8</color>
+</resources>
