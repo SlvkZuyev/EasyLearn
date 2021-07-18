@@ -17,7 +17,7 @@
     <style name="AnswerButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">55dp</item>
-        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
         <item name="android:fontFamily">@font/denda_new_c</item>
         <item name="android:background">@drawable/rnd_rect_blue</item>
         <item name="android:onClick">buttonPress</item>

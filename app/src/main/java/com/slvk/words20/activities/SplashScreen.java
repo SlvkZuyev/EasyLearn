@@ -8,8 +8,6 @@ import android.os.Handler;
 
 import com.slvk.words20.App;
 import com.slvk.words20.R;
-import com.slvk.words20.activities.MainActivity;
-import com.slvk.words20.activities.TasksList;
 import com.slvk.words20.database.helpers.FirebaseHelper;
 
 public class SplashScreen extends AppCompatActivity {
@@ -26,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
         FirebaseHelper fbHelper = new FirebaseHelper(App.getSQLiteDatabase(), this);
         fbHelper.setThemesListener();
         Handler hd = new Handler();
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ThemesList.class);
         Runnable rn = new Runnable() {
             @Override
             public void run() {

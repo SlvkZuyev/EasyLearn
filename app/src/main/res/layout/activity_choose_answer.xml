@@ -39,63 +39,61 @@
             android:fontFamily="@font/denda_new_c_bold"
             android:text="Word to translate"
             android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/answer1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.181" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/answer1"
             style="@style/AnswerButton"
-            android:layout_marginTop="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/answer4"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/word" />
+            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <Button
             android:id="@+id/answer2"
             style="@style/AnswerButton"
+            app:layout_constraintBottom_toTopOf="@+id/answer3"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/answer4" />
+            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <Button
             android:id="@+id/answer3"
             style="@style/AnswerButton"
+            app:layout_constraintBottom_toTopOf="@+id/answer0"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/answer2" />
+            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <Button
             android:id="@+id/answer0"
             style="@style/AnswerButton"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/next_button"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/answer3" />
+            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <Button
             android:id="@+id/answer4"
             style="@style/AnswerButton"
+            app:layout_constraintBottom_toTopOf="@+id/answer2"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/answer1" />
+            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <Button
             android:id="@+id/next_button"
             style="@style/GoNextButton"
-            android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/answer0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.988"
             tools:visibility="invisible" />
 
         <androidx.constraintlayout.widget.Guideline

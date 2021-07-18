@@ -2,20 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.slvk.words20">
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".App"
         android:allowBackup="true"
+        android:configChanges="orientation"
+        android:forceDarkAllowed="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:configChanges="orientation"
-        android:screenOrientation="portrait"
         android:roundIcon="@drawable/ic_launcher_round"
-        android:forceDarkAllowed="false"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SplashScreen"
-            android:screenOrientation = "portrait"
+        <activity android:name=".activities.Login"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,28 +25,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.tasks.Blitz"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".activities.tasks.TypeTheWord"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".activities.tasks.BuildTheWord"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".activities.TasksList"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".activities.Result"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".activities.tasks.ChooseAnswer"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".activities.MainActivity"
-            android:screenOrientation = "portrait"
-            tools:ignore="LockedOrientationActivity"/>
 
+        <activity
+            android:name=".activities.SplashScreen"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+        <activity
+            android:name=".activities.tasks.Blitz"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.tasks.TypeTheWord"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.tasks.BuildTheWord"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.TasksList"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.Result"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.tasks.ChooseAnswer"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.ThemesList"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
