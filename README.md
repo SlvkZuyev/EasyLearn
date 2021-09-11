@@ -1,4 +1,4 @@
 # EasyLearn
 This app was made to simplify learning of English words. 
 
-It takes groups of words from firebse database and provides tools for studying them. 
+It takes groups of words from database and provides tools for studying them. 
