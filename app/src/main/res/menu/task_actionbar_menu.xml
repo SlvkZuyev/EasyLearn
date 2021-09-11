@@ -7,4 +7,5 @@
         app:showAsAction="always"
         android:icon="@drawable/cross"
         android:title="close cross" />
+
 </menu>

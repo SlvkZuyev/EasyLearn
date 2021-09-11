@@ -22,8 +22,8 @@ import java.util.List;
 
 public class ThemeAdapter  extends RecyclerView.Adapter<ThemeAdapter.ThemeViewHolder> {
 
-    List<ThemeDescription> themes = new ArrayList<>();
-    CardView cv;
+    private List<ThemeDescription> themes = new ArrayList<>();
+    private CardView cv;
 
     public interface OnThemeClickListener{
         void onThemeClick(ThemeDescription theme);

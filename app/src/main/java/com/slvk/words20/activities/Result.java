@@ -138,7 +138,7 @@ public class Result extends AppCompatActivity {
     }
 
     public void OnClick_GoBack(View view) {
-        Intent intent = new Intent(this, ThemesList.class);
+        Intent intent = new Intent(this, TopicsList.class);
         startActivity(intent);
     }
 }

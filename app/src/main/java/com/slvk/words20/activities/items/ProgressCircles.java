@@ -26,18 +26,18 @@ public class ProgressCircles {
     }
 
     public void setNextCorrect(){
-        drawEmptyCircles();
         if(allCirclesFilled() ){
             currentCirclePosition = 0;
+            drawEmptyCircles();
         }
         circles[currentCirclePosition].setImageResource(R.drawable.correct_circle);
         currentCirclePosition++;
     }
 
     public void setNextNotCorrect(){
-        drawEmptyCircles();
         if(allCirclesFilled() ){
             currentCirclePosition = 0;
+            drawEmptyCircles();
         }
         circles[currentCirclePosition].setImageResource(R.drawable.not_correct_circle);
         currentCirclePosition++;
@@ -46,6 +46,5 @@ public class ProgressCircles {
     private boolean allCirclesFilled(){
         return currentCirclePosition == numberOfCircles;
     }
-
 
 }

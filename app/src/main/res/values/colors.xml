@@ -10,4 +10,11 @@
     <color name="white">#FFFFFF</color>
     <color name="grey">#AAAAAA</color>
     <color name="answerButtonBlue">#75A3E8</color>
+    <color name="purpleBackground">#6A66A3</color>
+    <color name="orange">#EDD341</color>
+    <color name="stroke_word">#A4A1CC</color>
+    <color name="word_color">#F5F2FF</color>
+    <color name="word_green">#44C096</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="btn_state_pressed_text_color">#BB696969</color>
 </resources>

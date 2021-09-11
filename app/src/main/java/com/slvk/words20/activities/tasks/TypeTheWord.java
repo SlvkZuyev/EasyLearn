@@ -1,16 +1,16 @@
 package com.slvk.words20.activities.tasks;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.slvk.words20.R;
 import com.slvk.words20.activities.Result;
-
-import javax.crypto.Cipher;
 
 public class TypeTheWord extends BaseTaskActivity {
 
@@ -20,7 +20,9 @@ public class TypeTheWord extends BaseTaskActivity {
     EditText typedWord_EditText;
     Button checkButton;
     Button goNextButton;
-
+    Boolean pointsNotAdded;
+    View baseView;
+    Snackbar snackbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +30,16 @@ public class TypeTheWord extends BaseTaskActivity {
 
         setToolBar();
         setProgressBar();
+        pointsNotAdded = true;
 
+       // initSnackbar();
         typedWord_EditText = (EditText) findViewById(R.id.typed_word);
         correctTranslate = (TextView) findViewById(R.id.correct_translate);
         wordToTranslate = (TextView) findViewById(R.id.word_to_translate);
         checkButton = (Button) findViewById(R.id.check_button);
         goNextButton = (Button) findViewById(R.id.next_button);
         setEditTextListener();
+        initSnackbar();
         wordToTranslate.setText(wordsToLearn[currentWordPosition][RUS]);
     }
 
@@ -73,6 +78,7 @@ public class TypeTheWord extends BaseTaskActivity {
 
     void showNextWord() {
         currentWordPosition++;
+        pointsNotAdded = true;
         hideCorrectTranslate();
         clearTypedWord();
         setColorToTypedText(R.color.clearBlack);
@@ -81,16 +87,52 @@ public class TypeTheWord extends BaseTaskActivity {
     }
 
     void correct() {
+        if(pointsNotAdded){
+            numberOfCorrectAnswers++;
+            progressBar.setCurrentColor(progressBar.GREEN);
+            pointsNotAdded = false;
+        }
         setColorToTypedText(R.color.correctGreen);
-        numberOfCorrectAnswers++;
-        progressBar.setCurrentColor(progressBar.GREEN);
         hideCheckButton();
     }
 
+
     void notCorrect() {
-        setColorToTypedText(R.color.notCorrectRed);
-        numberOfWrongAnswers++;
-        progressBar.setCurrentColor(progressBar.RED);
+        if(pointsNotAdded){
+            setColorToTypedText(R.color.notCorrectRed);
+            numberOfWrongAnswers++;
+            progressBar.setCurrentColor(progressBar.RED);
+            pointsNotAdded = false;
+        } else {
+            showSnackBar();
+        }
+
+    }
+
+    private boolean snackBarIsShown = false;
+    private void showSnackBar(){
+        if(!snackBarIsShown) { //Если снекбар не показан
+            snackbar.show();
+        }
+    }
+
+    private void initSnackbar(){
+        baseView = checkButton;
+        snackbar = Snackbar.make(baseView, "Перевод всё ещё не верный", Snackbar.LENGTH_SHORT)
+                .setAction("Action", null);
+        snackbar.addCallback(new Snackbar.Callback(){
+            @Override
+            public void onDismissed(Snackbar transientBottomBar, int event) {
+                snackBarIsShown = false;
+                super.onDismissed(transientBottomBar, event);
+            }
+
+            @Override
+            public void onShown(Snackbar sb) {
+                snackBarIsShown = true;
+                super.onShown(sb);
+            }
+        });
     }
 
     private void hideCheckButton() {
@@ -122,9 +164,9 @@ public class TypeTheWord extends BaseTaskActivity {
 
     void checkWord(String userWord) {
         userWord = userWord.toLowerCase();
-        userWord = userWord.replaceAll("\\s", "");
+        //userWord = userWord.replaceAll("\\s", "");
         String correctWord = wordsToLearn[currentWordPosition][ENG].toLowerCase();
-        correctWord = correctWord.replaceAll("\\s", "");
+       // correctWord = correctWord.replaceAll("\\s", "");
         if (userWord.equals(correctWord)) {
             correct();
         } else {

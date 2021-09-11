@@ -24,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
         FirebaseHelper fbHelper = new FirebaseHelper(App.getSQLiteDatabase(), this);
         fbHelper.setThemesListener();
         Handler hd = new Handler();
-        Intent intent = new Intent(this, ThemesList.class);
+        Intent intent = new Intent(this, TopicsList.class);
         Runnable rn = new Runnable() {
             @Override
             public void run() {
